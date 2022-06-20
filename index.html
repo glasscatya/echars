@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <style>
+        #main {
+            margin: auto;
+        }
+
+        #dd {
+            margin: auto;
+            width: 640px;
+            height: 30px;
+        }
+
+        #menu {
+            font: 12px verdana, arial, sans-serif;
+        }
+
+        #menu,
+        #menu li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu li {
+            float: left;
+        }
+
+        #menu li a {
+            display: block;
+            padding: 8px 50px;
+            background: #3A4953;
+            color: #fff;
+            text-decoration: none;
+            border-right: 1px solid #000;
+        }
+
+        #menu li a:hover {
+            background: #146C9C;
+            color: #fff;
+            text-decoration: none;
+            border-right: 1px solid #000;
+        }
+
+        #menu li a.last {
+            border-right: 0;
+            /* 去掉左侧边框 */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dd">
+        <ul id="menu">
+            <li><a id="1">冰箱一层</a></li>
+            <li><a id="2">冰箱二层</a></li>
+            <li><a id="3">冰箱三层</a></li>
+            <li><a id="4" class="last">冰箱四层</a></li>
+        </ul>
+    </div>
+
+    </div>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="main" style="width: 800px;height:600px;"></div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="echarts.js"></script>
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    //生成时间轴
+    let meu = [];
+    for (let i = 0; i < 30; i++) {
+        let t = i;
+        t < 10 ? t = `0${t}` : t;
+        meu.push(`8:${t}`);
+    }
+
+    let temp = [];
+    for (let p = 0; p < 30; p++) {
+        temp.push(Math.random());
+    }
+    // 指定图表的配置项和数据
+    var option = {
+        xAxis: {
+            type: 'category',
+            data: meu
+        },
+        yAxis: {},
+        series: [
+            {
+                data: temp,
+                type: 'line',
+                label: {
+                    show: true,
+                    position: "bottom",
+                    textStyle: {
+                        fontSize: 20
+                    }
+                }
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+
+
+    $('#1').click(() => {
+        myChart.dispose();
+        myChart = echarts.init(document.getElementById('main'));
+        //生成时间轴
+        let meu = [];
+        for (let i = 0; i < 30; i++) {
+            let t = i;
+            t < 10 ? t = `0${t}` : t;
+            meu.push(`12:${t}`);
+        }
+
+        for (let p = 0; p < 30; p++) {
+            temp.push(Math.random());
+        }
+        // 指定图表的配置项和数据
+        var option = {
+            xAxis: {
+                type: 'category',
+                data: meu
+            },
+            yAxis: {},
+            series: [
+                {
+                    data: temp,
+                    type: 'line',
+                    label: {
+                        show: true,
+                        position: "bottom",
+                        textStyle: {
+                            fontSize: 20
+                        }
+                    }
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    });
+
+
+
+    $('#2').click(() => {
+        myChart.dispose();
+        myChart = echarts.init(document.getElementById('main'));
+        //生成时间轴
+        let meu = [];
+        for (let i = 0; i < 30; i++) {
+            let t = i;
+            t < 10 ? t = `0${t}` : t;
+            meu.push(`2:${t}`);
+        }
+        for (let p = 0; p < 30; p++) {
+            temp.push(Math.random());
+        }
+        // 指定图表的配置项和数据
+        var option = {
+            xAxis: {
+                type: 'category',
+                data: meu
+            },
+            yAxis: {},
+            series: [
+                {
+                    data: temp,
+                    type: 'line',
+                    label: {
+                        show: true,
+                        position: "bottom",
+                        textStyle: {
+                            fontSize: 20
+                        }
+                    }
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    });
+
+
+
+    $('#3').click(() => {
+        myChart.dispose();
+        myChart = echarts.init(document.getElementById('main'));
+        //生成时间轴
+        let meu = [];
+        for (let i = 0; i < 30; i++) {
+            let t = i;
+            t < 10 ? t = `0${t}` : t;
+            meu.push(`3:${t}`);
+        }
+        for (let p = 0; p < 30; p++) {
+            temp.push(Math.random());
+        }
+        // 指定图表的配置项和数据
+        var option = {
+            xAxis: {
+                type: 'category',
+                data: meu
+            },
+            yAxis: {},
+            series: [
+                {
+                    data: temp,
+                    type: 'line',
+                    label: {
+                        show: true,
+                        position: "bottom",
+                        textStyle: {
+                            fontSize: 20
+                        }
+                    }
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    });
+
+
+
+    $('#4').click(() => {
+        myChart.dispose();
+        myChart = echarts.init(document.getElementById('main'));
+        //生成时间轴
+        let meu = [];
+        for (let i = 0; i < 30; i++) {
+            let t = i;
+            t < 10 ? t = `0${t}` : t;
+            meu.push(`4:${t}`);
+        }
+        for (let p = 0; p < 30; p++) {
+            temp.push(Math.random());
+        }
+        // 指定图表的配置项和数据
+        var option = {
+            xAxis: {
+                type: 'category',
+                data: meu
+            },
+            yAxis: {},
+            series: [
+                {
+                    data: temp,
+                    type: 'line',
+                    label: {
+                        show: true,
+                        position: "bottom",
+                        textStyle: {
+                            fontSize: 20
+                        }
+                    }
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    });
+</script>
+
+</html>
+
+<!-- 
+    在销毁图标时  应调用  echartsInstance.dispose防止内存泄漏
+ -->

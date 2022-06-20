@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <style type="text/css">
+        #menu {
+            font: 12px verdana, arial, sans-serif;
+        }
+
+        #menu, #menu li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu li {
+            float: left;
+        }
+
+        #menu li a {
+            display: block;
+            padding: 8px 50px;
+            background: #3A4953;
+            color: #fff;
+            text-decoration: none;
+            border-right: 1px solid #000;
+        }
+
+        #menu li a:hover {
+            background: #146C9C;
+            color: #fff;
+            text-decoration: none;
+            border-right: 1px solid #000;
+        }
+
+        #menu li a.last {
+            border-right: 0;
+            /* 去掉左侧边框 */
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li><a id="1">Baidu.Com</a></li>
+        <li><a id="2">Code52.Net</a></li>
+        <li><a id="3">Yahoo.Com</a></li>
+        <li><a id="4" class="last">Google.Com</a></li>
+    </ul>
+</body>
+
+</html>
